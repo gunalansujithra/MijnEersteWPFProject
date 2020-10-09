@@ -1,0 +1,25 @@
+﻿<Window x:Class="Wpf_Tools_Example.Oefening4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Tools_Example"
+        mc:Ignorable="d"
+        Title="Oefening4" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <DockPanel>
+                    <Menu DockPanel.Dock="Top">
+                        <MenuItem Header="Main">
+                            <MenuItem x:Name="mClear" Header="Clear" Click="mClear_Click"></MenuItem>
+                            <MenuItem x:Name="mCopy" Header="Copy" Click="mCopy_Click"></MenuItem>
+                            <MenuItem x:Name="mPaste" Header="Paste" Click="mPaste_Click"></MenuItem>
+                        </MenuItem>                        
+                    </Menu>
+                    <TextBox Width="200" HorizontalAlignment="Left" x:Name="txtInput"></TextBox>
+                </DockPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

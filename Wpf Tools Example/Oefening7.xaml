@@ -1,0 +1,55 @@
+﻿<Window x:Class="Wpf_Tools_Example.Oefening7"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Tools_Example"
+        mc:Ignorable="d"
+        Title="Oefening7" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TabControl Width="700" HorizontalAlignment="Left">
+                <TabItem Header="New Notities">
+                    <StackPanel>
+                        <TextBlock x:Name="tbTitel" Text="Titel: ">
+                        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="0,10,0,0" Width="200"></TextBox>
+                        </TextBlock>
+                        <TextBlock x:Name="tbDesc" Text="Description: ">
+                        <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Margin="0,10,0,0" Width="200"></TextBox>
+                        </TextBlock>
+                        <TextBlock x:Name="tbDate" Text="Date: ">
+                        <DatePicker x:Name="dpDate" Width="200" HorizontalAlignment="Left" Margin="0,10,0,0"></DatePicker>
+                        </TextBlock>
+                        <CheckBox x:Name="cbIsDone" Margin="0,10,0,0">Is Done?</CheckBox>
+                        <Button x:Name="btnSubmit" Width="100" Click="btnSubmit_Click" HorizontalAlignment="Left" Margin="0,10,0,0">Submit</Button>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Existing Notities">
+                    <StackPanel>
+                        <ComboBox x:Name="cbNotities" Grid.Column="2" Grid.Row="6" Margin="0,10,0,0" Width="200" HorizontalAlignment="Left" SelectionChanged="cbNotities_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Titel }"></TextBlock>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <TextBlock Text="Titel: ">
+                        <TextBox x:Name="txtTitle2" HorizontalAlignment="Left" Margin="0,10,0,0" Width="200"></TextBox>
+                        </TextBlock>
+                        <TextBlock Text="Description: ">
+                        <TextBox x:Name="txtDesc2" HorizontalAlignment="Left" Margin="0,10,0,0" Width="200"></TextBox>
+                        </TextBlock>
+                        <TextBlock Text="Date: ">
+                        <DatePicker x:Name="dpDate2" Width="200" HorizontalAlignment="Left" Margin="0,10,0,0"></DatePicker>
+                        </TextBlock>
+                        <CheckBox x:Name="cbIsDone2" Margin="0,10,0,0">Is Done?</CheckBox>
+                        <Button x:Name="btnSave" Width="100" Click="btnSave_Click" HorizontalAlignment="Left" Margin="0,10,0,0">Save</Button>
+                        <Button x:Name="btnDelete" Width="100" Click="btnDelete_Click" HorizontalAlignment="Left" Margin="0,10,0,0">Delete</Button>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </Grid>
+</Window>
